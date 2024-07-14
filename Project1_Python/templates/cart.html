@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cart_style.css') }}">
+    <!-- Add Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="cart-bg">
+    <div class="container">
+        <h1 class="my-4">Cart Contents</h1>
+
+        <!-- Display the titles of the books added to the cart successfully -->
+        {% if book_titles %}
+        <div class="text-center my-4">
+            <h4>Books added to your cart:</h4>
+            <ul class="list-unstyled">
+                {% for title in book_titles %}
+                <li class="text-success">{{ title }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+
+        <div class="cart-container">
+            <h2 class="mb-4">Your Cart</h2>  <!-- Bootstrap title -->
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Category</th>
+                        <th>Start Date</th>
+                        <th>Due Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in cart_items %}
+                    <tr>
+                        <td>{{ item.title }}</td>
+                        <td>{{ item.category }}</td>
+                        <td>{{ item.start_date }}</td>
+                        <td>{{ item.due_date }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <br>
+        <!-- Centered Back to Book Management button -->
+        <div class="text-center my-4">
+            <a href="{{ url_for('book_management') }}" class="btn btn-primary btn-lg">Back to Book Management</a>
+        </div>
+        <!-- Centered Logout button -->
+        <div class="text-center">
+            <a href="{{ url_for('logout') }}" class="btn btn-danger btn-lg">Logout</a>
+        </div>
+    

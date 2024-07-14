@@ -1,0 +1,122 @@
+/* static/cart_style.css */
+ 
+/* body {
+    font-family: Arial, sans-serif;
+    background: url('{{ url_for('static', filename='images/cart-background.jpg') }}') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 20px;
+} 
+*/
+/* static/css/cart_style.css */
+
+/* Background image for the cart page */
+body.cart-bg {
+    background: url('../images/img9.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cart-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.my-4 {
+    margin: 2rem 0;
+}
+
+.list-unstyled {
+    padding: 0;
+    list-style: none;
+}
+
+.text-success {
+    color: #28a745;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cart-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Centered message for books added to the cart */
+.text-center ul {
+    padding: 0;
+    list-style: none;
+}
+
+.text-center h4 {
+    margin-bottom: 10px;
+}
+
+.text-success {
+    color: #28a745; /* Green color */
+}
+
+.text-center {
+    text-align: center;
+}
+
+.my-4 {
+    margin: 2rem 0;
+}
