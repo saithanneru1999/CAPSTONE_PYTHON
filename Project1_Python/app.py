@@ -26,7 +26,7 @@ app.secret_key = generate_secret_key()
 db = mysql.connector.connect(
     host=os.getenv('DB_HOST', 'localhost'),
     user=os.getenv('DB_USER', 'root'),
-    password=os.getenv('DB_PASSWORD', 'root'),
+    password=os.getenv('DB_PASSWORD', 'rps@123'),
     database=os.getenv('DB_NAME', 'library_management')
 )
 
